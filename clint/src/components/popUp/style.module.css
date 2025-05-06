@@ -1,0 +1,43 @@
+.popUp {
+  position: sticky;
+  bottom: 4rem;
+  left: 80%;
+  width: fit-content;
+  padding: 0.8rem;
+  background-color: rgb(10, 255, 157);
+  border-radius: 10px;
+  text-align: center;
+  z-index: 999;
+  transition: left 0.3s ease;
+  color: black;
+}
+
+/* Close button */
+.popUp span {
+  border: 1px solid black;
+  padding: 0.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  color: red;
+}
+
+/* Responsive for tablets and smaller screens */
+@media (max-width: 768px) {
+  .popUp {
+    left: 60%;
+  }
+}
+
+/* Responsive for mobile screens */
+@media (max-width: 480px) {
+  .popUp {
+    width: 90%;
+    bottom: 2rem;
+    padding: 1rem;
+  }
+
+  .popUp span {
+    font-size: 1rem;
+  }
+}

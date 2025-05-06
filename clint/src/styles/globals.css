@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.home h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.home div {
+  width: 120%;
+  max-height: 70vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  margin: auto;
+  /* border: 1px solid yellow; */
+}
+
+table {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.247);
+  color: rgb(255, 253, 253);
+}
+
+thead {
+  background: rgb(0, 145, 255);
+}
+
+table thead,
+tbody,
+tr {
+  border-bottom: 1px solid rgb(18, 15, 15);
+}
+
+thead tr th {
+  padding: 0.8rem;
+}
+
+tbody tr td {
+  padding: 0.8rem;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .home {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .home div {
+    width: 100%;
+    max-height: 50vh;
+  }
+
+  table {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  table thead tr th,
+  tbody tr td {
+    padding: 0.6rem;
+  }
+
+  /* Adjust table layout */
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .home {
+    width: 100%;
+  }
+
+  .home div {
+    width: 100%;
+    max-height: 60vh;
+  }
+
+  table thead tr th,
+  tbody tr td {
+    padding: 0.7rem;
+  }
+
+  /* Adjust font size for better visibility on tablets */
+  table {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop and Larger Screens */
+@media (min-width: 1201px) {
+  .home {
+    width: 80%;
+  }
+
+  .home div {
+    width: 90%;
+    max-height: 70vh;
+  }
+
+  table thead tr th,
+  tbody tr td {
+    padding: 0.8rem;
+  }
+
+  /* Table font size for larger screens */
+  table {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile Small (300px and below) */
+@media (max-width: 300px) {
+  .home {
+    padding: 0 0.5rem;
+  }
+
+  .home div {
+    max-height: 40vh;
+  }
+
+  table {
+    font-size: 0.4rem;
+  }
+
+  table thead tr th,
+  tbody tr td {
+    padding: 0.2rem;
+  }
+}
+
+/* Mobile Small (450px and below) */
+@media (max-width: 450px) {
+  .home {
+    padding: 0 0.6rem;
+  }
+
+  .home div {
+    max-height: 45vh;
+  }
+
+  table {
+    font-size: 0.5rem;
+  }
+
+  table thead tr th,
+  tbody tr td {
+    padding: 0.3rem;
+    font-size: 0.6rem;
+  }
+}
+
+/* Mobile Medium (500px and below) */
+@media (max-width: 500px) {
+  .home {
+    padding: 0 0.8rem;
+  }
+
+  .home div {
+    max-height: 48vh;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  table thead tr th,
+  tbody tr td {
+    padding: 0.55rem;
+  }
+}
+
+/* Small Tablets (600px and below) */
+@media (max-width: 600px) {
+  .home {
+    padding: 0 1rem;
+  }
+
+  .home div {
+    max-height: 50vh;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  table thead tr th,
+  tbody tr td {
+    padding: 0.6rem;
+  }
+}
+
+/* Already Existing: Tablets (768px and below), Tablets (1024px and below), Desktop and Larger Screens (min-width: 1201px) */
