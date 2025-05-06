@@ -27,7 +27,8 @@ app.use(
     cookie: {
       maxAge: 86400000,
       httpOnly: true,
-      secure: false,
+      secure: "production", // important
+      sameSite: "none", // 💥 required for cookies across Vercel <-> Render
     },
   })
 );
