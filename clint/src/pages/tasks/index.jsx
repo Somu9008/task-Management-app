@@ -412,7 +412,7 @@ export default function index() {
               {createdClick && (
                 <div className={style.userCreatedTasks}>
                   <h2>Your Created Tasks:</h2>
-                  {createdTasks.length <= 0 ? <p>NO Task Create Yet</p> : <></>}
+
                   {createdUser.map((task) => {
                     return (
                       <div key={index}>

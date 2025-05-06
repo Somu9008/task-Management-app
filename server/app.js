@@ -7,12 +7,13 @@ require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 const cookieParser = require("cookie-parser");
-const { server } = app.use(
+app.use(
   cors({
     origin: "https://task-management-app-mu-ten.vercel.app/",
     credentials: true,
   })
 );
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
