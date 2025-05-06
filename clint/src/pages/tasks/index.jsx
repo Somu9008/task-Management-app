@@ -294,7 +294,7 @@ export default function index() {
                   <input
                     type="radio"
                     name="status"
-                    value="complited"
+                    value="Completed"
                     id="complete"
                     onChange={(e) => {
                       setStatus(e.target.value);
