@@ -27,11 +27,13 @@ app.use(
     cookie: {
       maxAge: 86400000,
       httpOnly: true,
-      secure: "production", // important
+      secure: true, // important
       sameSite: "none", // 💥 required for cookies across Vercel <-> Render
     },
   })
 );
+
+app.set("trust proxy", 1);
 
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
