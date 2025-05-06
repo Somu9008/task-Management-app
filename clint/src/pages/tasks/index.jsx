@@ -14,7 +14,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { openPopUp } from "@/features/task/taskSlice.js";
 import { setMessage } from "@/features/auth/authSlice.js";
 
-const socket = io("http://localhost:9000", {
+const socket = io("https://task-management-app-l3ar.onrender.com", {
   withCredentials: true,
 });
 
