@@ -3,7 +3,7 @@ const { createApi, fetchBaseQuery } = require("@reduxjs/toolkit/query/react");
 export const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:9000/api",
+    baseUrl: "https://task-management-app-l3ar.onrender.com/api",
     credentials: "include",
   }),
   endpoints: (builder) => ({

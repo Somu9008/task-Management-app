@@ -4,7 +4,7 @@ export const taskApi = createApi({
   reducerPath: "taskApi",
   tagTypes: ["Tasks"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:9000/api",
+    baseUrl: "https://task-management-app-l3ar.onrender.com/api",
     credentials: "include",
   }),
 
