@@ -9,7 +9,7 @@ const taskRoutes = require("./routes/taskRoutes");
 const cookieParser = require("cookie-parser");
 app.use(
   cors({
-    origin: "https://task-management-app-mu-ten.vercel.app/",
+    origin: "https://task-management-app-mu-ten.vercel.app",
     credentials: true,
   })
 );

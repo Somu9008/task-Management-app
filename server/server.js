@@ -4,7 +4,7 @@ const app = require("./app");
 const http = require("http");
 app.use(
   cors({
-    origin: "https://task-management-app-mu-ten.vercel.app/",
+    origin: "https://task-management-app-mu-ten.vercel.app",
     credentials: true,
   })
 );
@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://task-management-app-mu-ten.vercel.app/",
+    origin: "https://task-management-app-mu-ten.vercel.app",
     credentials: true,
   },
 });
