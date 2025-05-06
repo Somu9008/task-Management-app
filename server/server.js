@@ -2,13 +2,18 @@ require("dotenv").config();
 const cors = require("cors");
 const app = require("./app");
 const http = require("http");
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(
+  cors({
+    origin: "https://task-management-app-mu-ten.vercel.app/",
+    credentials: true,
+  })
+);
 const { Server } = require("socket.io");
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://task-management-app-mu-ten.vercel.app/",
     credentials: true,
   },
 });

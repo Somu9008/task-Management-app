@@ -8,7 +8,10 @@ const authRoutes = require("./routes/authRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 const cookieParser = require("cookie-parser");
 const { server } = app.use(
-  cors({ origin: "http://localhost:3000", credentials: true })
+  cors({
+    origin: "https://task-management-app-mu-ten.vercel.app/",
+    credentials: true,
+  })
 );
 app.use(express.json());
 app.use(cookieParser());
