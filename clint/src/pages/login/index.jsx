@@ -33,7 +33,7 @@ export default function login() {
 
         dispatch(setMessage(res.message));
       } catch (error) {
-        dispatch(setMessage(error.data.message));
+        dispatch(setMessage(error.data?.message));
         console.log(error.message);
       }
     } else {
@@ -52,7 +52,7 @@ export default function login() {
 
         dispatch(setMessage(res.message));
       } catch (error) {
-        dispatch(setMessage(error.data.message));
+        dispatch(setMessage(error.data?.message));
         console.log(error.message);
       }
     }
