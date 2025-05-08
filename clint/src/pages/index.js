@@ -45,7 +45,6 @@
 //   );
 // }
 
-import { Copy } from "lucide-react"; // Icon from lucide-react
 import { useAllUserQuery } from "@/features/auth/authApi";
 import { useEffect, useState } from "react";
 
@@ -71,33 +70,34 @@ export default function Home() {
     <div className="home">
       <h2>All Users</h2>
       <div>
-        <table>
+        <table className="custom-table">
           <thead>
             <tr>
-              <th>UserID</th>
+              <th>User ID</th>
               <th>Name</th>
-              <th>User Email</th>
+              <th>Email</th>
             </tr>
           </thead>
           <tbody>
-            {users?.map((user) => {
-              return (
-                <tr key={user._id}>
-                  <td className="flex items-center gap-2">
-                    {user._id}
-                    <Copy
-                      className="w-4 h-4 cursor-pointer text-blue-600 hover:text-blue-800"
-                      onClick={() => handleCopy(user._id)}
-                    />
-                    {copiedId === user._id && (
-                      <span className="text-green-500 text-xs">Copied!</span>
-                    )}
-                  </td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                </tr>
-              );
-            })}
+            {users?.map((user) => (
+              <tr key={user._id}>
+                <td className="copy-cell">
+                  <span>{user._id}</span>
+                  <span
+                    className="copy-icon"
+                    onClick={() => handleCopy(user._id)}
+                    title="Copy ID"
+                  >
+                    📋
+                  </span>
+                  {copiedId === user._id && (
+                    <span className="copied-tooltip">Copied!</span>
+                  )}
+                </td>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
